@@ -51,7 +51,7 @@ echo !empty($selected_icon) ? '<span class="icon '.$selected_icon.'"></span>' : 
 	function my_backend_scripts() {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );		
 	}
-	add_action( 'admin_enqueue_scripts', 'my_backend_scripts' );	
+	add_action( 'admin_enqueue_scripts', 'my_backend_scripts' );
 	```
 2. Add field.
 	```php
