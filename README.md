@@ -9,7 +9,6 @@ Features:
 * Works with repeatable groups.
 * Works as radio and multicheck.
 
-
 ## Example
 
 ```php
@@ -35,12 +34,19 @@ $cmb->add_field( array(
 	),	
 ) );
 ```
+**Output icon on frontend**
+Remember to enqueue icon font on frontend and give .icon appropriate style.
 
-Note that by default this field will output selected icon class as a string, but will output as array if multicheck is used.
+```php
+$selected_icon = get_post_meta( get_the_ID(), 'prefix_post_icon', true );
+echo !empty($selected_icon) ? '<span class="icon '.$selected_icon.'"></span>' : '';
+```
+
+**Note:** By default this field will output selected icon name as a string, but will output as array if multicheck is used.
 
 ## Using FontAwesome (or other preferred icon fonts)
 
-1. Enqueue font-awesome.min.css to backend, something like this: 
+1. Enqueue font-awesome.min.css to backend, something like this:
 	```php
 	function my_backend_scripts() {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );		
