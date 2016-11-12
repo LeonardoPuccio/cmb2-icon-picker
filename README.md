@@ -41,34 +41,34 @@ Note that by default this field will output selected icon class as a string, but
 ## Using FontAwesome (or other preferred icon fonts)
 
 1. Enqueue font-awesome.min.css to backend, something like this: 
-```php
-function my_backend_scripts() {
+	```php
+	function my_backend_scripts() {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );		
-}
-add_action( 'admin_enqueue_scripts', 'my_backend_scripts' );	
-```
+	}
+	add_action( 'admin_enqueue_scripts', 'my_backend_scripts' );	
+	```
 2. Add field.
-```php
-// Classic CMB2 declaration
-$cmb = new_cmb2_box( array(
-	'id'           => 'prefix-metabox-id',
-	'title'        => __( 'Post Info' ),
-	'object_types' => array( 'post', ),
-) );
+	```php
+	// Classic CMB2 declaration
+	$cmb = new_cmb2_box( array(
+		'id'           => 'prefix-metabox-id',
+		'title'        => __( 'Post Info' ),
+		'object_types' => array( 'post', ),
+	) );
 
-// Add new field
-$cmb->add_field( array(
-	'name'        => __( 'FontAwesome Icons' ),
-	'id'          => 'prefix_post_icon',	
-	'type'    => 'icon_picker',
-	'options' => array(
-		// The icons you want to use goes into this array:
-		'icons' => array('fa-amazon','fa-ambulance','fa-american-sign-language-interpreting','fa-anchor'),
-		// Add font-family to "fonts" !important; Note that you can use multiple iconfonts.
-		'fonts' => array('FontAwesome', 'dashicons'),
-	),	
-) );
-```
+	// Add new field
+	$cmb->add_field( array(
+		'name'        => __( 'FontAwesome Icons' ),
+		'id'          => 'prefix_post_icon',	
+		'type'    => 'icon_picker',
+		'options' => array(
+			// The icons you want to use goes into this array:
+			'icons' => array('fa-amazon','fa-ambulance','fa-american-sign-language-interpreting','fa-anchor'),
+			// Add font-family to "fonts" !important; Note that you can use multiple iconfonts.
+			'fonts' => array('FontAwesome', 'dashicons'),
+		),	
+	) );
+	```
 3. Profit!
 
 Here is an array with all the FontAwesome (Version 4.7.0) icons:
