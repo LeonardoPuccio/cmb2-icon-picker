@@ -46,7 +46,7 @@ echo !empty($selected_icon) ? '<span class="icon '.$selected_icon.'"></span>' : 
 
 ## Using FontAwesome (or other preferred icon fonts)
 
-1. Enqueue font-awesome.min.css to backend:
+1. Enqueue font-awesome.min.css to backend.
 	```php
 	function my_backend_scripts() {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );		
