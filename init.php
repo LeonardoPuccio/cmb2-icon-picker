@@ -10,7 +10,7 @@ class CMB2_Icon_Picker {
 	const VERSION = CMB2_ICON_PICKER_VERSION;
 
 	/**
-	 * @var WDS_CMB2_Attached_Posts_Field
+	 * @var CMB2_Icon_Picker
 	 */
 	protected static $single_instance = null;
 
