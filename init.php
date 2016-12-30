@@ -7,7 +7,7 @@ class CMB2_Icon_Picker {
 	/**
 	 * Current version number
 	 */
-	const VERSION = '0.1.0';
+	const VERSION = CMB2_ICON_PICKER_VERSION;
 
 	/**
 	 * @var CMB2_Icon_Picker
